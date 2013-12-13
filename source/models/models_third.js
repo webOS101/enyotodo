@@ -16,9 +16,6 @@ enyo.kind({
         return this.reset().filter(function(record) {
             return !record.get("done");
         });
-    },
-    recordChanged: function() {
-        this.filter();
     }
 });
 

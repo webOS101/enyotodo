@@ -1,24 +1,18 @@
 enyo.kind({
     name: "Todo.View",
     components: [
-        {kind: "onyx.Button", content: "New Todo", ontap: "newTodo"},
+        {kind: "enyo.Button", content: "New Todo", ontap: "newTodo"},
         {tag: "span", content: "Filter done items:"},
-        {kind: "onyx.Checkbox", onclick: "filter"},
+        {kind: "enyo.Checkbox", onclick: "filter"},
         {
             name: "repeater",
             kind: "DataRepeater",
             collection: ".app.$.todosCollection",
             components: [
                 {
-                    classes: "todo-item",
                     components: [
-                        {
-                            kind: "onyx.InputDecorator",
-                            components: [
-                                {name: "description", kind: "onyx.Input"}
-                            ]
-                        },
-                        {name: "done", kind: "onyx.Checkbox"}
+                        {name: "description", kind: "enyo.Input"},
+                        {name: "done", kind: "enyo.Checkbox"}
                     ],
                     bindings: [
                         {from: ".model.description", to: ".$.description.value", oneWay: false},

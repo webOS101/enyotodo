@@ -5,3 +5,8 @@
 .nice-padding {
 	padding: 15px;
 }
+
+.todo-row {
+	background-color: light-gray;
+	border-bottom: 1px solid black;
+}
